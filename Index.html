@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" sizes="512x1512" href="img/foguete.png">
+    <link rel="icon" type="image/png" sizes="512x1512" href="img/foguete.png">
+    <link rel="icon" type="image/png" sizes="512x1512" href="img/foguete.png">
+
+    <title>Home - Understood</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="home.html"> <img  class="unders" src="img/devlitz.png" alt=""> </a>
+            </div>
+
+            <ul>
+                <li> <a class="lg1" href="#">Home</a> </li>
+                <li> <a class="lg2" href="timer.html">Timer</a> </li>
+                <li> <a class="lg3" href="#">Relatório</a> </li>
+                <li> <a class="lg4" href="#">Sobre</a> </li>
+                <li class="lg"> <a href="login.html">Login</a> </li>
+            </ul>
+
+            <div class="menu-icon">
+                <img src="img/abrir-menu.png" alt="">
+            </div>
+
+        </nav>
+
+        <main>
+            <div class="main_text">
+                <h1> <b>UNDERSTOOD</b> <br> <strong>Viaje conosco nesse <br> universo de estudos! </strong> </h1>
+                
+                <p>
+
+                </p>
+
+            </div>
+            <div class="main_img">
+                <img class="unders" src="img/understood.png" alt="">
+            </div>
+        </main>
+    </div>
+
+    
+    <!-- SCRIPT MODO RESPANSIVO -->
+    <script>
+        var menu = document.querySelector('nav ul');
+        var menuIcon = document.querySelector('nav .menu-icon');
+        var menuIconImg = document.querySelector('nav .menu-icon img');
+
+        menuIcon.addEventListener('click',()=>{
+            menu.classList.toggle('activo');
+            if (menuIconImg.getAttribute("src") == 'img/abrir-menu.png') {
+                menuIconImg.setAttribute("src","img/cruz.png");
+            }else{
+                menuIconImg.setAttribute("src","img/abrir-menu.png")
+            }
+        })
+    </script>
+
+<!-- VANILLA -->
+
+<script type="text/javascript" src="vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".unders "), {
+        max: 18,
+        speed: 0.1,
+        glare: true,
+    });
+</script>
+</body>
+</html>

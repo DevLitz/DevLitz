@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <link rel="shortcut icon" href="img/tomato.png">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Revisão - Understood</title>
+
+    <!--CSS-->
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+    <!--JS & JQuery-->
+    <script type="text/javascript" src="js/info.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script2.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <div class="App">
+    <div class="box">
+
+      <div class="text-box">
+
+        <h1 class="modo">Modo Revisão</h1>
+        
+        <p>O modo revisão tem como
+          objetivo <br>recaptular aquilo que ja<br>  
+          foi estudado utilizando apenas 15<br> 
+          minutos de revisao</p>
+       </div>
+       
+      <div class="app-box">
+        <h1 class="relogio">15:00</h1>
+      
+   
+      <div class="buttons">
+        <button id="bt1" class="iniciar">START</button>
+        <button id="bt2" class="parar">STOP</button>
+        <button id="bt3" class="resetar">RESET</button>
+      </div>
+    </div>
+    
+  </div>
+  
+
+<div class="sec2">
+    <div class="App-2">
+
+      <div class="box-2">
+
+        <div class="app-box-2">
+          <button id="play" href="#timer" onclick="startTimer()">Descanso</button>
+
+          <div class="part2">
+            <div class="contador2">
+            <div id="timer">5:00</div>
+               
+        </div>
+            </div>
+
+    </div>
+
+        <div class="text-box-2">
+          <h1 class="modo-2">Descanso</h1>
+          <p>Após o termino do tempo de<br>
+          estudos, inicie seu descanso clicando<br>
+        no botão ao lado e aproevte seu descanso!</p>
+         </div>
+         
+
+      
+    </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function startTimer(){
+      var duration = 60 * 5;
+      var display = document.querySelector("#timer");
+      var timer = duration, minutes, seconds;
+
+      setInterval(function(){
+          
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.textContent = minutes + ":" + seconds;
+
+          if(--timer < 0) {
+              timer = duration;
+          }
+      }, 1000);
+  }
+</script>
+
+  </body>
+</html>

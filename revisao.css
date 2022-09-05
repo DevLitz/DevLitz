@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 4%;
+    height: 55vh;
+    display: block;
+    background-color: #370091;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body{
+    min-height: 100vh;
+    background: rgb(81, 0, 161) 
+    ;
+}
+
+nav{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 90px;
+    text-decoration: NONE;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+nav ul li{
+    padding: 20px;   
+}
+
+nav ul li:not(.lg)::after{
+    display: block;
+    content: '';
+    width: 100%;
+    transition: 0.5s;
+    height: 3px;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+} 
+
+nav ul li.lg{
+    border: 1px solid royalblue;
+    border-radius: 13px;
+    padding: 5px 40px;
+    margin-left: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+nav ul li.lg:hover{
+    transform: scale(1.1);
+}
+
+nav ul li a{
+    color: #6100FF;
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: 6px 15px;
+    font-size: 1.1em;
+   
+    border-radius: 8px;
+    transition: 0.5s;
+    font-weight: 700;
+    align-items: flex-end;
+    position: relative;
+}
+
+
+nav ul li a:hover{
+    background: #ffffff;
+    color: #F9095F;
+    transform: scale(1.2);
+}
+
+.container-2{
+    text-align: end;
+    background-color: #3d0072;
+}
+
+button{
+    background: #F9095F;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 850;
+    padding: 8px 20px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 13px;
+    width: 170px;
+    box-shadow: 10px -10px#74092f;
+    transition: 0.5s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+select{
+    width: 70px;
+    height: 60px;
+    font-size: 5em;
+    color: #ffffff;
+    background-color: transparent;
+    display: inline-block;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 3em;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    text-shadow: 3px -3px #F9095F;
+}
+
+h2{
+    display: inline-block;
+    margin: 65px 0px 0px 40px;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 900;   
+}
+
+h3{
+    color: #F9095F;
+    font-size: 2.1em;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 3px -3px #5a0020;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 380px;
+}
+
+#timer{
+    font-family: 'Poppins' sans-serif;
+    font-size: 7em;
+    font-weight: 900;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.contador{
+    background-color: #6100FF;
+    width: 430px;
+    height: 200px;
+    border-radius: 35px;
+    box-shadow: 20px -20px #1f0052;
+    display: end;
+    margin-left: 900px;
+    margin-top: 50px;
+}
+
+#play{
+    position: absolute;
+    z-index: 10;
+    margin-top: 180px;
+    margin-left: 420px;
+}
+
+p{
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-left: 260px;
+    margin-top: 70px;
+    position: absolute; 
+}
+
+.explicacao{
+    margin-left: -50px;
+}
+
+.pt1{
+    width: 50%;
+}
+
+.pt{
+    width: 50%;
+}
+
+
+#plays{
+    position: absolute;
+    z-index: 10;
+    margin-top: 180px;
+    margin-left: 420px;
+}
+
+.explicacao{
+    margin-left: -50px;
+}
+
+.part1{
+    width: 50%;
+}
+
+.part2{
+    width: 50%;
+}
+
+.contador2{
+    background-color: #6100FF;
+    width: 430px;
+    height: 200px;
+    border-radius: 35px;
+    box-shadow: 20px -20px #1f0052;
+    display: end;
+    margin-left: 900px;
+    margin-top: 50px;
+}

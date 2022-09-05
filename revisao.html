@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="revisao.css">
+
+    <link rel="apple-touch-icon" sizes="512x1512" href="img/foguete.png">
+    <link rel="icon" type="image/png" sizes="512x1512" href="img/foguete.png">
+    <link rel="icon" type="image/png" sizes="512x1512" href="img/foguete.png">
+
+    <title>Nível Prova - Understood</title>
+</head>
+<body>
+
+    <div class="container">
+    <nav>
+        <div class="logo">
+            <h1>UNDERSTOOD</h1>
+        </div>
+        <ul>
+            <li> <a href="Index.html">Home</a> </li>
+            <li> <a href="#">Relatório</a> </li>
+            <li> <a href="#">Sobre</a> </li>
+        </ul>
+        <div class="menu-icon">
+            <img src="img/abrir-menu.png" alt="">
+        </div>
+    </nav>
+
+<div class="mae">
+    <div class="pt1">
+    <div class="explicacao">
+        <h3> MODO REVISÃO</h3>
+        <p>O MODO VESTIBULAR TEM COMO<br>
+            OBJETIVO QUE VOCÊ TENHA MAIOR<br>
+            INTENSIDADE NOS ESTUDOS,<br> 
+            DISPONIBILIZANDO 30 MINUTOS<br>
+            COM A MÃO NA MASSA</p>
+
+        <button id="play" href="#timer" onclick="startTimer()">START</button>
+    </div>
+</div>
+
+    <div class="pt2">
+    <div class="contador">
+    <div id="timer"></div>
+       
+</div>
+    </div>
+</div>
+</div>
+
+<div class="mae2">
+    <div class="part1">
+    <div class="explicacao2">
+        <h3> DESCANÇO</h3>
+        <p>VOCÊ PODE ESCOLHER QUANTO<BR>
+        TEMPO DE DESCANÇO VOCÊ DESEJA </p>
+
+        <button id="playS" href="#time" onclick="startTimer()">START</button>
+    </div>
+</div>
+
+    <div class="part2">
+    <div class="contador2">
+    <div id="time"></div>
+       
+</div>
+    </div>
+</div>
+
+<!-- preloader -->
+<script>
+    
+    $(window).on('load', function (){
+        $('#preloader .inner').fadeOut();
+        $('#preloader').delay(350).fadeOut('slow');
+        $('body').delay(350).css({'overflow': 'visible'});
+
+    })
+</script>
+
+<!-- timer -->
+    <script>
+        function startTimer(){
+            var duration = 60 * 15;
+            var display = document.querySelector("#timer");
+            var timer = duration, minutes, seconds;
+
+            setInterval(function(){
+                
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if(--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+    </script>
+
+<script>
+    function startTimer(){
+        var duration = 60 * 15;
+        var display = document.querySelector("#timer");
+        var timer = duration, minutes, seconds;
+
+        setInterval(function(){
+            
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if(--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+</script>
+</body>
+</html>

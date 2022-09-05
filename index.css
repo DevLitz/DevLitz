@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+    height: 100vh;
+}
+
+body{
+    min-height: 100vh;
+    background: #4b00c4;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 90px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+nav ul li{
+    padding: 20px;   
+}
+
+nav ul li:not(.lg)::after{
+    display: block;
+    content: '';
+    width: 100%;
+    transition: 0.5s;
+    height: 3px;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+} 
+
+nav ul li.lg{
+    border: 1px solid royalblue;
+    border-radius: 13px;
+    padding: 5px 40px;
+    margin-left: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+nav ul li.lg:hover{
+    transform: scale(1.1);
+}
+nav ul li.lg1:hover{
+    transform: scale(1.1);
+}
+nav ul li.lg2:hover{
+    transform: scale(1.1);
+}
+nav ul li.lg3:hover{
+    transform: scale(1.1);
+}
+
+nav ul li a{
+    color: #F9095F;
+    text-decoration: none;
+    padding: 2px 1px;
+    font-size: 1.1em;
+   
+    border-radius: 8px;
+    transition: 0.5s all;
+    font-weight: 700;
+    align-items: flex-end;
+    position: relative;
+}
+
+
+nav ul li a:hover{
+    background: #ffffff;
+    color: #F9095F;
+    transform: scale(1.1);
+}
+
+.log{
+    width: 50px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+main .main_text{
+    width: 50%;
+}
+
+main .main_text h1{
+    font-size: 2em;
+    color: #ffffff;
+    font-weight: 800;
+    font-family: 'Poppins' sans-serif;
+    text-shadow: -3px -2px #F9095F;
+}
+
+main .main_text h1 strong{
+    display: block;
+    font-weight: normal;
+}
+
+main .main_text h1 b{
+    color: #ffffff;
+    padding: 0 5px;
+    font-size: 4rem;
+}
+
+
+main .main_text button{
+    background-color: azure;
+    color: #6100FF;
+    border-radius: 13px;
+    padding: 10px 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 800;
+    border:  1px solid transparent;
+    transition: all 0.5s;
+}
+
+main .main_text button:hover{
+    transform: scale(1.1);
+}
+
+main .main_img{
+    width: 50%;
+    backface-visibility:visible;
+    transform-style:preserve-3d;
+    transform:perspective(1000px);
+    transition:box-shadow 220ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+main .main_img img{
+    width: 100%;
+    cursor: grab;
+}
+
+.unders{
+    backface-visibility:visible;
+    transform-style:preserve-3d;
+}
+
+.card{
+    width: 100%;
+}
+
+
+
+
+/* INICIO RESPANSIVIDADE */
+
+@media (max-width: 1175px) {
+    .slider{
+        position: relative;
+        width: 697px;
+        overflow: hidden;
+        border-radius: 20px;
+        margin-top: 20%;
+    }
+
+    .segundo-body{
+        width: 100%;
+        height: 150vh;
+        background:#4D0092;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .menu-icon{
+        display: block;
+    }
+
+    hr{
+        display: none;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 60%;
+        transform: translateX(-100%);
+        transform: 0.6s;
+    }
+
+    nav ul.activo{
+        transform: translateX(0%);
+    }
+
+    nav ul li.lg{
+        border: 1px solid white;
+        margin-left: 0;
+    }
+
+    nav ul li a{
+        color: #F9095F;
+        font-size: 35px;
+    }
+
+    main{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    main .main_text{
+        width: 100%;
+        text-align: center;
+    }
+
+    main .main_img{
+        margin-top: 70px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1070px) { 
+
+
+    .cards{
+        margin-top: 80px;
+    }
+    nav .menu-icon{
+        display: block;
+    }
+
+    .segundo-body{
+        height: 110vh;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 60%;
+        transform: translateX(-100%);
+        transform: 0.6s;
+    }
+
+    nav ul.activo{
+        transform: translateX(0%);
+    }
+
+    nav ul li.lg{
+        border: 1px solid white;
+        margin-left: 0;
+    }
+
+    nav ul li:not(.lg)::after{
+        background-color: #ffffff;
+    }
+
+    nav ul li a{
+        color: #ffffff;
+        font-size: 24px;
+    }
+
+    main{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    main .main_text{
+        width: 100%;
+        text-align: center;
+    }
+
+    main .main_img{
+        margin-top: 70px;
+        width: 100%;
+    }
+
+    .segundo-body{
+        height: 100vh;
+        background-color: #370091;
+     }
+}  
+
+@media (max-width:775px){
+    .slider{
+        display: none;
+    }
+
+    .segundo-body{
+       height: 65vh;
+       background-color: #370091;
+    }
+
+    .cards{
+        padding: 5px;
+    }
+    
+}
+
+@media (max-width:555px) {
+    main .main_text h1 b{
+        font-size: 3rem;
+    }
+
+    main .main_text h1 strong{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:525px) {
+    main .main_text h1 b{
+        font-size: 2.2rem;
+    }
+
+    main .main_text h1 strong{
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    .menu-icon{
+        margin-left: 88%;
+        position: absolute;
+    }
+}
+
+@media (max-width:390px) {
+    main .main_text h1 b{
+        font-size: 2.2rem;
+    }
+
+    main .main_text h1 strong{
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    .menu-icon{
+        margin-left: 83%;
+        position: absolute;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

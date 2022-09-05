@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(imgg/Design.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+.planets{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+}
+
+.w50{
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+
+.box{
+    display: flex;
+    width: 930px;
+    position: relative;
+    z-index: 20;
+}
+
+.img-box{
+    background-color: #08052E;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius:20px 0 0 20px ;
+    position: relative;
+    z-index: 20;
+}
+
+.img-box img{
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    height: 90%;
+    border-radius: 30px;
+}
+
+.form-box{
+    background-color: #08052E;
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 0 20px 20px 0;
+}
+
+.form-box h2{
+    font-size: 30px;
+}
+
+.form-box p{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.form-box p a{
+    color: rgb(224, 46, 135);
+}
+
+form .input-group{
+    margin-bottom: 15px;
+}
+
+form .input-group label{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+ .form-box h2{
+    font-size: 30px;
+ }
+
+ .form-box p{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+ }
+
+ .form-box p a{
+    color: rgb(224, 46, 135);
+    text-decoration: none;
+ }
+
+ .form-box form{
+    margin: 20px 0;
+ }
+
+form ,.input-group label{
+    color: royalblue;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .input-group input{
+    width: 100%;
+    height: 47px;
+    background-color: bisque;
+    border-radius: px;
+    outline: none;
+    border: 2px transparent;
+    padding: 15px;
+    font-size: 14px;
+    color: rgb(173, 16, 90);
+    transition: all 0.4s ease;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+}
+
+form .input-group input:focus{
+    border-color:#ff008869 ;
+}
+ 
+form .input-group button{
+    width: 100%;
+    height: 47px;
+    background: #FF008A;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: 600;
+}
+h2{
+    color: #FF008A;
+}
+
+@media (max-width: 910px) {
+    .img-box{
+        display: none;
+    }
+
+    .box{
+        width: 700px;
+    }
+
+    .form-box{
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+}
